@@ -1,2 +1,2 @@
 # alfredworkflows
-Random place for Alfred workflows and related stuff
+Place for Alfred workflows and related stuff
