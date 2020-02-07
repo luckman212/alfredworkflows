@@ -24,3 +24,6 @@ This workflow should not require any dependencies, but was only tested on macOS 
 
 ## Screenshot:
 ![screenshot](clipsaver.png)
+
+## Download:
+https://github.com/luckman212/alfredworkflows/blob/master/ClipSaver.alfredworkflow?raw=true
