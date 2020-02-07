@@ -27,3 +27,6 @@ This workflow should not require any dependencies, but was only tested on macOS 
 
 ## Download:
 https://github.com/luckman212/alfredworkflows/blob/master/ClipSaver.alfredworkflow?raw=true
+
+## Forum topic:
+https://www.alfredforum.com/topic/14400-clipsaver-save-images-from-clipboard-history-to-png-files/
