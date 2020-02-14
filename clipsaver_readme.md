@@ -1,4 +1,4 @@
-# ClipSaver (v1.0.3)
+# ClipSaver (v1.1.0)
 
 This workflow has two modes and is triggered by the `cs` keyword by default.
 
