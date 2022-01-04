@@ -1,29 +1,30 @@
-# ClipSaver (v1.1.0)
+# ClipSaver (v2.0.0)
 
-This workflow has two modes and is triggered by the `cs` keyword by default.
+# ClipSaver 
 
-Mode 1 presents the images from the clipboard history via a Script Filter, and allows selecting one image to be extracted, converted to PNG (Alfred saves them as .tiff) and placed in a folder of your choosing (default is on the Desktop, in a folder called `saved_clips`)
+This workflow is triggered with the `cs` keyword by default.
 
-Mode 2 accepts an integer (N) and will recursively save the last N images to the designated folder.
+It presents images from Alfred's clipboard history via a Script Filter, and allows selecting an image to be extracted, converted to a format of your choice (default is PNG) and placed in a folder of your choosing (default is on the Desktop, in a folder called `saved_clips`). You can optionally set the `save_to_current` environment variable to have the workflow save to the currently active Finder window.
 
-Both modes will remove the clipboard entry as well as the .tiff from Alfred's database upon successful conversion.
+Upon success, the original clipboard entry as well as the .tiff from Alfred's database will be removed.
 
 ## Workflow Variables
 
-- `db_name` defaults to `clipboard.alfdb` (required)
-- `db_path` defaults to `Library/Application Support/Alfred/Databases` (required)
-- `dest_dir` defaults to `Desktop/saved_clips` (required)
+- `db_name` defaults to `clipboard.alfdb`
+- `db_path` defaults to `Library/Application Support/Alfred/Databases`
+- `dest_dir` where to save images if `save_to_current == false`, defaults to `Desktop/saved_clips` (required)
 - `sf_clip_limit` (default: empty) you can optionally specify a limit to constrain the number of results displayed in the Script Filter
+- `save_to_current` (default: false) - set to `true` if you want the workflow to put saved images in the directory of the "frontmost" Finder window
+- `default_format` - set to e.g. `jpeg`, `png` etc (use `sips --formats` to see all available formats). You can override per invocation by passing as an argument.
 
 ## Usage Tips
 
 - Tap `SHIFT` while navigating through Script Filter results to get a QuickLook preview of the image. While QL is displayed, you can use the Arrow keys to flip through results.
-- This makes use of the JSON `match` property so you can filter the results by the name of the App from which it was captured. E.g. with `cs chrome` you'll see only images from Google Chrome.
-
-This workflow should not require any dependencies, but was only tested on macOS 10.15.3 + Alfred 4.0.8.1135.
+- Pass a number as an argument to the script to save X number of clips in bulk
+- Pass an image format e.g. `jpeg` as an argument to override your default format
 
 ## Screenshot:
-![screenshot](clipsaver.png)
+<img width=500 src=https://user-images.githubusercontent.com/1992842/148102272-1e6e8cf5-08c1-4f3e-add5-63b56225ba3c.png>
 
 ## Download:
 https://github.com/luckman212/alfredworkflows/blob/master/ClipSaver.alfredworkflow?raw=true
